@@ -1,0 +1,15 @@
+{
+  "name": "sdb_client",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "shared_database - client browser",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "author": "",
+  "license": "",
+  "peerDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

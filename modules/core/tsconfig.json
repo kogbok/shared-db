@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "baseUrl": "."
+  },
+  "files": [
+    "../../typings/index.d.ts",
+    "index.ts"
+  ]
+}
+
+
+

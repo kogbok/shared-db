@@ -1,0 +1,15 @@
+{
+  "name": "sdb_core",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "shared_database - the core",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "author": "",
+  "license": "",
+  "peerDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

@@ -1,0 +1,13 @@
+{ 
+  "compilerOptions": {
+    "baseUrl": ".",
+      "module": "commonjs",
+      "target": "es5",
+      "sourceMap": true,
+      "declaration": true,
+      "noImplicitAny": true,
+      "paths": {
+        "sdb_core": ["../../../../build/modules/sdb_core"]
+      }
+  }
+}
