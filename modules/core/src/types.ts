@@ -43,6 +43,7 @@ export class Output<T> {
 //  id type
 //  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 export type UUID           = string;
+export type ActorId        = UUID;
 export type BucketId       = UUID;
 export type ReplicaId      = UUID;
 export type ReplicaLocalId = number;
