@@ -1,6 +1,6 @@
 # what
 
-Shared database is an open source project that gives the user the freedom to choose where to store his data. This is a database that the software developer integrates into its product. This open source project is designed to meet both end-user and developer needs. 
+shared-db is an open source project that gives the user the freedom to choose where to store his data. This is a database that the software developer integrates into its product. This open source project is designed to meet both end-user and developer needs. 
 
 1. For the end-user
     - He remains master of his data. 
@@ -18,7 +18,7 @@ Different technical solutions are possible, thanks to initiatives such as the Eu
 
 # how
 This database address 5 technical challenges:
-* Offline mode [Write Fast, Read in the Past](https://hal.inria.fr/hal-01158370/document)
+* Offline mode: you can find a description of this approach in this paper [Write Fast, Read in the Past](https://hal.inria.fr/hal-01158370/document)
 * Concurrent editing, with automatic synchronization thanks to [CRDT](http://hal.upmc.fr/inria-00555588/document)
 * Passive consensus for work on passive server like free storage services. you can find exemple [here](http://ieeexplore.ieee.org/document/7436648/)
 * Garbage collector technique with multi processus
