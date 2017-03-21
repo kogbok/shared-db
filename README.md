@@ -1,4 +1,4 @@
-# shared-db
+# what
 
 Shared database is an open source project that gives the user the freedom to choose where to store his data. This is a database that the software developer integrates into its product. This open source project is designed to meet both end-user and developer needs. 
 
@@ -14,3 +14,14 @@ Shared database is an open source project that gives the user the freedom to cho
     - A software product that allows users to choose where to store their data has a competitive advantage over competitors. 
  
 Different technical solutions are possible, thanks to initiatives such as the European project [SyncFree](https://syncfree.lip6.fr/), or passive consensus techniques. These choices do not allow to create products like Twitter or Facebook, but allow different uses such as: messaging applications, document editing, or data management for IoT. 
+
+
+# how
+This database address 4 technical challenges:
+* offline mode [Write Fast, Read in the Past](https://hal.inria.fr/hal-01158370/document)
+* concurrent editing, with automatic synchronization thanks to [CRDT](http://hal.upmc.fr/inria-00555588/document)
+* passive consensus for work on passive server like free storage services. you can find exemple [here](http://ieeexplore.ieee.org/document/7436648/)
+* garbage collector technique with multi processus
+
+# when
+This project is just in the creation phase, if one part of the code is present on this repo there remains much to do
