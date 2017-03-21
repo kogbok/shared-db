@@ -17,11 +17,12 @@ Different technical solutions are possible, thanks to initiatives such as the Eu
 
 
 # how
-This database address 4 technical challenges:
-* offline mode [Write Fast, Read in the Past](https://hal.inria.fr/hal-01158370/document)
-* concurrent editing, with automatic synchronization thanks to [CRDT](http://hal.upmc.fr/inria-00555588/document)
-* passive consensus for work on passive server like free storage services. you can find exemple [here](http://ieeexplore.ieee.org/document/7436648/)
-* garbage collector technique with multi processus
+This database address 5 technical challenges:
+* Offline mode [Write Fast, Read in the Past](https://hal.inria.fr/hal-01158370/document)
+* Concurrent editing, with automatic synchronization thanks to [CRDT](http://hal.upmc.fr/inria-00555588/document)
+* Passive consensus for work on passive server like free storage services. you can find exemple [here](http://ieeexplore.ieee.org/document/7436648/)
+* Garbage collector technique with multi processus
+* Intuitive integration on common frameworks including React, Angular
 
 # when
 This project is just in the creation phase, if one part of the code is present on this repo there remains much to do
