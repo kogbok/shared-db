@@ -6,7 +6,7 @@ shared-db is an open source project that gives the user the freedom to choose wh
     - He remains master of his data. 
     - He can choose to store his data wherever he wants: 
         1. On a server: NAS, remote server, ...
-        2. On  services: personal service like [Cozy](www.cozy.io/en/), or database service like [CouchDB](https://aws.amazon.com/marketplace/pp/B00AJZJVNS). 
+        2. On  services: personal service like [Cozy](www.cozy.io/en/), or database service like CouchDB. 
         3. It will also be possible to store his data on a free storage service like Google Drive or Dropbox, with encrypted data. 
  
 2. For the developer: 
