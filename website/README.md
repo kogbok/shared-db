@@ -1,4 +1,4 @@
-# [Phenomic](https://github.com/MoOx/phenomic) phenomic-theme-base
+# shared-db website
 
 ## Install dependencies
 
@@ -16,4 +16,10 @@ npm start
 
 ```sh
 npm run build
+```
+
+## deploy on gh-pages branches
+
+```sh
+npm run deploy
 ```
