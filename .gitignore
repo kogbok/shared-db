@@ -3,3 +3,7 @@ build
 node_modules
 sandbox
 typings/*
+
+website/node_modules
+website/*.log
+website/dist
