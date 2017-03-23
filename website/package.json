@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "shared-db",
-  "homepage": "http://www.shared-db.com",
+  "homepage": "https://kogbok.github.io/shared-db/",
   "twitter": "kogbok",
   "repository": "https://github.com/kogbok/shared-db",
   "scripts": {
@@ -11,7 +11,8 @@
     "start": "phenomic start",
     "build": "phenomic build",
     "pretest": "npm run lint",
-    "test": "npm run build"
+    "test": "npm run build",
+    "deploy": "./scripts/deploy.sh"
   },
   "phenomic": {
     "CNAME": true
