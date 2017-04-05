@@ -1,5 +1,5 @@
 # What
-shared-db is an open source project that gives the user the freedom to choose where to store his data. This is a database that the software developer integrates into its product. This open source project is designed to meet the needs of three types of actors.
+shared-db is an open source project that gives the user the freedom to choose where to store his data. This is a database that the software developer integrates into its product. shared-db is designed to be a lite database engine such as [SQLite](https://www.sqlite.org/about.html) or [UnQLite](https://unqlite.org/). As such database it can be integrated into an application but it add support for concurrent access and synchronization. This open source project is designed to meet the needs of three types of actors.
 
 ### For end users
 * He can choose to store his data wherever he wants. At home if he is an expert, or use specific services.
