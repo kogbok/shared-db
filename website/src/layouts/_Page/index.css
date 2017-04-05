@@ -45,10 +45,11 @@
     0 0 2px var(--colorNeutralDark)
   ;
   letter-spacing: 1px;
+  margin: 0.8rem;
 }
 
 .cta {
-  margin-top: 2rem;
+  margin-top: 0.8rem;
 }
 
 .pageContent {
