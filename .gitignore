@@ -4,6 +4,8 @@ node_modules
 sandbox
 typings/*
 
+docs/build
+
 website/node_modules
 website/*.log
 website/dist
