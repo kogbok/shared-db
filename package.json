@@ -7,7 +7,7 @@
     "uuid": "^3.0.1"
   },
   "devDependencies": {
-    "app-module-path": "^2.1.0",
+    "app-module-path": "^2.2.0",
     "child_process": "^1.0.2",
     "gulp": "^3.9.1",
     "gulp-jasmine-node": "^1.0.7",

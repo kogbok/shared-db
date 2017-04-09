@@ -54,3 +54,7 @@ gulp.task('run_making', function () {
     timeout: 10000
   }));
 });
+
+gulp.task('docs_deploy', function (done) {
+  return gulp.src(['docs/build/html/**/*']).pipe(gulp.dest('website/content/docs'));
+});

@@ -9,3 +9,4 @@ docs/build
 website/node_modules
 website/*.log
 website/dist
+website/content/docs

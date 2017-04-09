@@ -9,6 +9,7 @@ import Homepage from "./layouts/Homepage"
 import Post from "./layouts/Post"
 
 import _Page from "./layouts/_Page"
+import _Documentation from "./layouts/_Documentation"
 import _Home from "./layouts/_Home"
 
 const PageContainer = (props) => (
@@ -20,6 +21,7 @@ const PageContainer = (props) => (
       Homepage,
       Post,
       _Page,
+      _Documentation,
       _Home,
     }}
   />

@@ -10,6 +10,8 @@ import PhenomicLoaderSitemapWebpackPlugin
 
 import pkg from "./package.json"
 
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 export default (config = {}) => {
 
   // hot loading for postcss config
@@ -26,7 +28,9 @@ export default (config = {}) => {
     ...config.dev && {
       devtool: "#cheap-module-eval-source-map",
     },
+    
     module: {
+      
       noParse: /\.min\.js/,
       // webpack 1
       loaders: [
@@ -235,7 +239,9 @@ export default (config = {}) => {
         },
       }),
       */
-
+      new CopyWebpackPlugin([
+        { from: 'content/docs', to: 'docs2' },
+      ]),
       new PhenomicLoaderFeedWebpackPlugin({
         // here you define generic metadata for your feed
         feedsOptions: {

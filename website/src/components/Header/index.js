@@ -17,6 +17,18 @@ const Header = (props, { metadata: { pkg } }) => (
         >
           { "Home" }
         </Link>
+        {/*<a
+          className={ styles.link }
+          href={"docs2/index.html"}
+        >
+        Docs
+        </a>*/}
+        <Link
+          className={ styles.link }
+          to={ "/documentation" }
+        >
+          { "Documentation" }
+        </Link>
       </div>
       <div className={ styles.navPart2 }>
         {
