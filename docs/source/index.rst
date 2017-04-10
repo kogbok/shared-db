@@ -1,15 +1,18 @@
-.. shared-db documentation master file, created by
-   sphinx-quickstart on Fri Apr  7 00:42:03 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+*********
+shared-db
+*********
 
-Welcome to shared-db's documentation!
-=====================================
+shared-db is designed to be a light database engine such as SQLite or UnQLite. As such database it can be integrated into an application but it add support for concurrent access and synchronization.
+
+.. note:: This work-in-progress documentation describe the main part of this database. The documentation is currently in draft form.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
+   paxos
+   bibliography
+   license
 
 
 Indices and tables

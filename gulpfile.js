@@ -1,4 +1,6 @@
 let gulp = require("gulp");
+let gutil = require('gulp-util');
+var exec = require('child_process').exec;
 let ts_tasks = require('./scripts/typescript_tasks.js');
 var jasmineNode = require('gulp-jasmine-node');
 
@@ -53,6 +55,15 @@ gulp.task('run_making', function () {
   return gulp.src(['build/compiled/sandbox/making/**/*.js']).pipe(jasmineNode({
     timeout: 10000
   }));
+});
+
+gulp.task('docs_make_html', function (done) {
+  let  command = 'call docs/make html';
+  return exec(command, (err, stdout, stderr) => {
+      if (stdout) console.log(stdout);
+      if (stderr) console.log(stderr);
+      done(err);
+    });
 });
 
 gulp.task('docs_deploy', function (done) {
