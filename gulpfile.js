@@ -1,5 +1,6 @@
 let gulp = require("gulp");
 let gutil = require('gulp-util');
+var del = require('del');
 var exec = require('child_process').exec;
 let ts_tasks = require('./scripts/typescript_tasks.js');
 var jasmineNode = require('gulp-jasmine-node');
