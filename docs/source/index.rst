@@ -11,6 +11,7 @@ shared-db is designed to be a light database engine such as SQLite or UnQLite. A
    :caption: Contents:
 
    paxos
+   glossary
    bibliography
    license
 

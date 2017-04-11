@@ -1,4 +1,4 @@
-let gutil = require('gulp-util');
+var gutil = require('gulp-util');
 var exec = require('child_process').exec;
 
 module.exports = {
@@ -11,8 +11,8 @@ module.exports = {
       target: 'es2015',
 
       to_string: function() {
-        let parameters = '';
-        for (let o in this) {
+        var parameters = '';
+        for (var o in this) {
           if(typeof this[o] === 'string')
             parameters += '--' + o + ' ' + this[o] + ' ';
           else if (o != 'to_string')
@@ -24,10 +24,10 @@ module.exports = {
   },
 
   build_project: function (options, done) {
-    let  command = 'tsc ' + options.to_string();
+    var  command = 'tsc ' + options.to_string();
     console.log('typescript cmd: ' + command);
 
-    exec(command, (err, stdout, stderr) => {
+    exec(command, function (err, stdout, stderr) {
       if (stdout) console.log(stdout);
       if (stderr) console.log(stderr);
       done(err);

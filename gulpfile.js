@@ -1,20 +1,22 @@
-let gulp = require("gulp");
-let gutil = require('gulp-util');
+var gulp = require("gulp");
+var gutil = require('gulp-util');
 var del = require('del');
 var exec = require('child_process').exec;
-let ts_tasks = require('./scripts/typescript_tasks.js');
+var ts_tasks = require('./scripts/typescript_tasks.js');
 var jasmineNode = require('gulp-jasmine-node');
 
-let module_build_path = '/build/compiled/modules/';
-let sandbox_build_path = '/build/compiled/sandbox/';
+var module_build_path = '/build/compiled/modules/';
+var sandbox_build_path = '/build/compiled/sandbox/';
+
+var is_window = /^win/.test(process.platform);
 
 require('app-module-path').addPath('.' + module_build_path);
 
 function build_module(path_name, module_name, done) {
-  let output_dir = __dirname + module_build_path + module_name; 
-  let tsconfig_file_name = 'modules/' + path_name + '/' + 'tsconfig.json';
+  var output_dir = __dirname + module_build_path + module_name; 
+  var tsconfig_file_name = 'modules/' + path_name + '/' + 'tsconfig.json';
 
-  let options = ts_tasks.create_project(); 
+  var options = ts_tasks.create_project(); 
     options.project = tsconfig_file_name;
     options.outDir = output_dir;
 
@@ -22,10 +24,10 @@ function build_module(path_name, module_name, done) {
 }
 
 function build_sandbox(sandbox_name, done) {
-  let output_dir = __dirname + sandbox_build_path + sandbox_name; 
-  let tsconfig_file_name = 'sandbox/' + sandbox_name + '/' + 'tsconfig.json';
+  var output_dir = __dirname + sandbox_build_path + sandbox_name; 
+  var tsconfig_file_name = 'sandbox/' + sandbox_name + '/' + 'tsconfig.json';
 
-  let options = ts_tasks.create_project(); 
+  var options = ts_tasks.create_project(); 
     options.project = tsconfig_file_name;
     options.outDir = output_dir;
 
@@ -59,8 +61,12 @@ gulp.task('run_making', function () {
 });
 
 gulp.task('docs_make_html', function (done) {
-  let  command = 'call docs/make html';
-  return exec(command, (err, stdout, stderr) => {
+  var win_cmd = 'call docs/make html';
+  var linux_cmd = 'make -C docs/ html';
+  
+  var command = (is_window) ? win_cmd : linux_cmd;
+
+  return exec(command, function (err, stdout, stderr) {
       if (stdout) console.log(stdout);
       if (stderr) console.log(stderr);
       done(err);
