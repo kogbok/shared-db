@@ -12,6 +12,7 @@ shared-db is designed to be a light database engine such as SQLite or UnQLite. A
 
    paxos
    glossary
+   mathematical_symbols
    license
 
 
