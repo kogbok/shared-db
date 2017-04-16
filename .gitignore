@@ -3,7 +3,7 @@ build
 node_modules
 sandbox
 typings/*
-
+specifications/paxos/*.toolbox
 docs/build
 
 website/node_modules
