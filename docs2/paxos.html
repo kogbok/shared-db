@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Paxos &mdash; shared-db 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/mystyle.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="shared-db 0.0 documentation" href="index.html"/>
+        <link rel="next" title="Glossary" href="glossary.html"/>
+        <link rel="prev" title="shared-db" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> shared-db
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Paxos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#static-paxos">Static Paxos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#big-picture">Big picture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-some-detail">Add some detail</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#passive-paxos">Passive Paxos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematical_symbols.html">Mathematical symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license.html#apache-license">Apache License</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="license.html#terms-and-conditions-for-use-reproduction-and-distribution">TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#definitions">1. Definitions.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#grant-of-copyright-license">2. Grant of Copyright License.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#grant-of-patent-license">3. Grant of Patent License.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#redistribution">4. Redistribution.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#submission-of-contributions">5. Submission of Contributions.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#trademarks">6. Trademarks.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#disclaimer-of-warranty">7. Disclaimer of Warranty.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#limitation-of-liability">8. Limitation of Liability.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#accepting-warranty-or-additional-liability">9. Accepting Warranty or Additional Liability.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#appendix-how-to-apply-the-apache-license-to-your-work">APPENDIX: How to apply the Apache License to your work</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">shared-db</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Paxos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/paxos.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="paxos">
+<h1>Paxos<a class="headerlink" href="#paxos" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>If only one agent uses the database, there is no synchronization problem. On the other hand, if two or more agents use the database, we must guarantee synchronization.
+On a <a class="reference internal" href="glossary.html#term-passive-server"><span class="xref std std-term">passive server</span></a>, there is no synchronization system. Each agent must participate to make this synchronization possible, the agents must reach a &#8220;consensus&#8221;. There is no communication between agents, to reach this consensus, agents must communicate via the <a class="reference internal" href="glossary.html#term-passive-server"><span class="xref std std-term">passive server</span></a>.</p>
+<p><strong>Goal</strong>: This section describes how agents can reach a <a class="reference internal" href="glossary.html#term-consensus"><span class="xref std std-term">consensus</span></a>. To do this, we will define a protocol that these agents must follow.
+<strong>Constraints</strong>:
+- The agents and their means of communication may have breakdowns.
+- The solution must ensure that all cases are managed safely.</p>
+<p><strong>problem</strong>: On asynchronous system there is no fault-tolerant algorithm to ensure consensus is reached in a bounded time. This is the <strong>FLP result</strong> discribe in this article <a class="reference internal" href="#fischer1985" id="id1">[FLP85]</a> <a class="reference external" href="https://en.wikipedia.org/wiki/Dijkstra_Prize">Dijkstra Prize in 2001</a>.
+The FLP result does not state that consensus can never be reached, but progression towards consensus is not guaranteed.</p>
+<p>In this situation what do we want?
+- A guarantee of safety: no inconsistency possible.
+- Blocking situations (which prevent progression towards consensus) must be difficult to create.
+=&gt; This is what Paxos protocols propose.</p>
+<p>First we describe the simplest form of paxos, which is static paxos. After we describe passive paxos we will be the paxos used in shared-db.</p>
+</div>
+<div class="section" id="static-paxos">
+<h2>Static Paxos<a class="headerlink" href="#static-paxos" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/static_paxos_view_0.svg"><img alt="_images/static_paxos_view_0.svg" src="_images/static_paxos_view_0.svg" width="200pt" /></a>
+</div>
+<div class="section" id="big-picture">
+<h3>Big picture<a class="headerlink" href="#big-picture" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="add-some-detail">
+<h3>Add some detail<a class="headerlink" href="#add-some-detail" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="passive-paxos">
+<h2>Passive Paxos<a class="headerlink" href="#passive-paxos" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-paxos-0"><table class="docutils citation" frame="void" id="fischer1985" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[FLP85]</a></td><td>Michael&nbsp;J. Fischer, Nancy&nbsp;A. Lynch, and Michael&nbsp;S. Paterson. Impossibility of distributed consensus with one faulty process. <em>J. ACM</em>, 32(2):374–382, April 1985. URL: <a class="reference external" href="http://doi.acm.org/10.1145/3149.214121">http://doi.acm.org/10.1145/3149.214121</a>, <a class="reference external" href="https://doi.org/10.1145/3149.214121">doi:10.1145/3149.214121</a>.</td></tr>
+</tbody>
+</table>
+</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="shared-db" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, shared-db.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
