@@ -60,7 +60,7 @@ gulp.task('run_making', function () {
   }));
 });
 
-gulp.task('docs_make_html', function (done) {
+gulp.task('make_docs', function (done) {
   var win_cmd = 'call docs/make html';
   var linux_cmd = 'make -C docs/ html';
   

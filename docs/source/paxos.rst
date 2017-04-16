@@ -25,6 +25,8 @@ First we describe the simplest form of paxos, which is static paxos. After we de
 Static Paxos
 ============
 
+.. figure:: _static/images/static_paxos_view_0.svg
+   :width: 200pt
 
 Big picture
 -----------

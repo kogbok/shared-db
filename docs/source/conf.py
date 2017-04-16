@@ -55,7 +55,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'shared-db'
-copyright = u'2017, Laurent Schneider'
+copyright = u'2017, shared-db'
 author = u'Laurent Schneider'
 
 # The version info for the project you're documenting, acts as replacement for
