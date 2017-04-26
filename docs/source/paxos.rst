@@ -1,37 +1,15 @@
+protocol passive paxos with one storage service
+// consensus :
+//  - deux approches decrite dans visual group theory (si ca fonctionne)
+//  - reprendre la presentation du site raft
+//  - state machine input -> log append only
+
+
 *******
 Paxos
 *******
 
-Introduction
-============
-If only one agent uses the database, there is no synchronization problem. On the other hand, if two or more agents use the database, we must guarantee synchronization.
-On a :term:`passive server`, there is no synchronization system. Each agent must participate to make this synchronization possible, the agents must reach a "consensus". There is no communication between agents, to reach this consensus, agents must communicate via the :term:`passive server`.
 
-
-The state-machine approach is a general method for implementing an arbitrary distributed system. The system is designed as a deterministic state machine that executes a sequence of commands, and a consensus algorithm ensures that. This reduces the problem of buildingan arbitrary system to solving the consensus problem. 
-We need an algorithme an algorithm to transform any finite-state machine (FSM) into a fault-tolerant distributed system.
-=> Time, clocks, and the orderingof events in a distributed system
-=> Implementingfault-tolerant services usingthe state
-machine approach
-state machine replication
-
-
-
-
-**Goal**: This section describes how agents can reach a :term:`consensus`. To do this, we will define a protocol that these agents must follow.
-**Constraints**:
-- The agents and their means of communication may have breakdowns.
-- The solution must ensure that all cases are managed safely.
-
-**problem**: On asynchronous system there is no fault-tolerant algorithm to ensure consensus is reached in a bounded time. This is the **FLP result** discribe in this article :cite:`Fischer1985` `Dijkstra Prize in 2001 <https://en.wikipedia.org/wiki/Dijkstra_Prize>`_.
-The FLP result does not state that consensus can never be reached, but progression towards consensus is not guaranteed.
-
-In this situation what do we want?
-- A guarantee of safety: no inconsistency possible.
-- Blocking situations (which prevent progression towards consensus) must be difficult to create.
-=> This is what Paxos protocols propose.
-
-Paxos is not the only solution for solve the consensus, raph, blockchain ... but we thinks in shared-db passive server, paxos is the best approch.
 
 First we describe the simplest form of paxos, which is static paxos. After we describe passive paxos we will be the paxos used in shared-db.
 
@@ -86,7 +64,7 @@ Fig4
 activity diagram
 
 
-Conclusion
+review
 -----------
 => this paxos is the slower form of Paxos , we can speed it up but doing so makes it very complex.
 
@@ -130,6 +108,23 @@ what is a list append only
 
 protocol
 -----------
+
+
+// passive-paxos is a simple adaptation of static-paxos where the choose to know wich proposal is accepted is make by the proposer
+//- 
+
+//Role:
+// - the storage service provide an append only list service., all client  communicate wih this service.
+// - node are client of the storage service.
+
+
+
+
+
+// client state: offline - online
+// on line sub state: Follower, Proposer
+// - prepare: to propose a value, a client send the msg "PREPARE" the value with a proposal number to the append only list. the proposal number must be unique. the client state switch from follower to proposer
+// - the client discard his proposition if an another proposal with bigger proposal number appear in the append list.
 
 
 
