@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_NJCycCsiEeeGUN5soUHiNw" name="RootElement">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_UeWzICsiEeeGUN5soUHiNw" name="IAppendOnly"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_GWzVECuPEeeYPKJQdJxFIQ" name="SharedDataOnLog"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_c4PhsCuPEeeYPKJQdJxFIQ" memberEnd="_c4YEkCuPEeeYPKJQdJxFIQ _c4YroCuPEeeYPKJQdJxFIQ" navigableOwnedEnd="_c4YEkCuPEeeYPKJQdJxFIQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c4TMECuPEeeYPKJQdJxFIQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c4TzICuPEeeYPKJQdJxFIQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_c4YroCuPEeeYPKJQdJxFIQ" name="shareddataonlog" type="_GWzVECuPEeeYPKJQdJxFIQ" association="_c4PhsCuPEeeYPKJQdJxFIQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_c4YEkCuPEeeYPKJQdJxFIQ" name="iappendonly" type="_UeWzICsiEeeGUN5soUHiNw" aggregation="composite" association="_c4PhsCuPEeeYPKJQdJxFIQ"/>
+  </packagedElement>
+</uml:Model>
