@@ -6,7 +6,15 @@
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c4TMECuPEeeYPKJQdJxFIQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c4TzICuPEeeYPKJQdJxFIQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_c4YroCuPEeeYPKJQdJxFIQ" name="shareddataonlog" type="_GWzVECuPEeeYPKJQdJxFIQ" association="_c4PhsCuPEeeYPKJQdJxFIQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_c4YroCuPEeeYPKJQdJxFIQ" type="_GWzVECuPEeeYPKJQdJxFIQ" association="_c4PhsCuPEeeYPKJQdJxFIQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_c4YEkCuPEeeYPKJQdJxFIQ" name="iappendonly" type="_UeWzICsiEeeGUN5soUHiNw" aggregation="composite" association="_c4PhsCuPEeeYPKJQdJxFIQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_nP0uoCuREeeYPKJQdJxFIQ" name="IState"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_xYoxsCuREeeYPKJQdJxFIQ" memberEnd="_xYr1ACuREeeYPKJQdJxFIQ _xYtDICuREeeYPKJQdJxFIQ" navigableOwnedEnd="_xYr1ACuREeeYPKJQdJxFIQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xYqm4CuREeeYPKJQdJxFIQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xYrN8CuREeeYPKJQdJxFIQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xYtDICuREeeYPKJQdJxFIQ" type="_GWzVECuPEeeYPKJQdJxFIQ" association="_xYoxsCuREeeYPKJQdJxFIQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xYr1ACuREeeYPKJQdJxFIQ" name="istate" type="_nP0uoCuREeeYPKJQdJxFIQ" aggregation="composite" association="_xYoxsCuREeeYPKJQdJxFIQ"/>
   </packagedElement>
 </uml:Model>

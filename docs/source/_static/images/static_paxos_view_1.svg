@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="static_paxos_view_1.svg"
+   id="svg2"
+   height="514.78528"
+   width="501.93744"
+   version="1.1">
+  <sodipodi:namedview
+     fit-margin-left="10"
+     fit-margin-bottom="10"
+     fit-margin-right="10"
+     fit-margin-top="10"
+     inkscape:current-layer="layer1"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="159.91631"
+     inkscape:cx="394.70306"
+     inkscape:zoom="0.6966514"
+     showgrid="false"
+     id="namedview4055"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4535">
+      <stop
+         offset="0"
+         style="stop-color:#fda197;stop-opacity:1"
+         id="stop4531" />
+      <stop
+         offset="1"
+         style="stop-color:#fda197;stop-opacity:1"
+         id="stop4533" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6652">
+      <stop
+         id="stop6644"
+         style="stop-color:#f2c1b6;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop6650"
+         style="stop-color:#fda197;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5514"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5512"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#e63878;fill-opacity:1;fill-rule:evenodd;stroke:#cf4f7e;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5514-1"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5512-83"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#e63878;fill-opacity:1;fill-rule:evenodd;stroke:#cf4f7e;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6652"
+       id="radialGradient6642-2"
+       cx="352.54324"
+       cy="457.38232"
+       fx="352.54324"
+       fy="457.38232"
+       r="173.93857"
+       gradientTransform="matrix(1.2978721,0,0,0.82360755,-39.826262,58.353729)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6652"
+       id="radialGradient6642-2-2"
+       cx="352.54324"
+       cy="457.38232"
+       fx="352.54324"
+       fy="457.38232"
+       r="173.93857"
+       gradientTransform="matrix(1.2978721,0,0,0.82360755,-43.055985,191.49064)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-167.60467,-250.06393)"
+     id="layer1">
+    <rect
+       width="476.19614"
+       height="293.84875"
+       ry="49.686024"
+       x="180.47533"
+       y="360.0657"
+       id="rect3057"
+       style="fill:#e7c1ba;fill-opacity:1;stroke:#e63878;stroke-width:5.741;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       x="243.08441"
+       y="355.57803"
+       id="text5314"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20.06547546px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:0.3156139"><tspan
+         x="243.08441"
+         y="355.57803"
+         id="tspan5318"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.83274078px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#3d3d3d;fill-opacity:1;stroke-width:0.3156139">Paxos</tspan></text>
+    <text
+       x="372.99332"
+       y="277.24362"
+       id="text11543"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="372.99332"
+         y="277.24362"
+         id="tspan11545"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Arial;-inkscape-font-specification:Arial">Request</tspan></text>
+    <text
+       x="364.06363"
+       y="750.07965"
+       id="text11543-6"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="364.06363"
+         y="750.07965"
+         id="tspan11545-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Arial;-inkscape-font-specification:Arial">Response</tspan></text>
+    <path
+       style="fill:#e63878;fill-opacity:1;fill-rule:evenodd;stroke:#cf4f7e;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5514)"
+       d="m 418.57339,282.28268 v 69.01269"
+       id="path4111"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#e63878;fill-opacity:1;fill-rule:evenodd;stroke:#cf4f7e;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5514-1)"
+       d="m 418.57339,656.78512 v 69.01269"
+       id="path4111-4"
+       inkscape:connector-curvature="0" />
+    <rect
+       width="448.9043"
+       height="123.01309"
+       ry="20.799921"
+       x="193.2776"
+       y="373.55072"
+       id="rect3057-1"
+       style="fill:url(#radialGradient6642-2);fill-opacity:1;stroke:#e63878;stroke-width:3.60669112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       width="448.9043"
+       height="123.01309"
+       ry="20.799921"
+       x="190.04788"
+       y="506.68762"
+       id="rect3057-1-3"
+       style="fill:url(#radialGradient6642-2-2);fill-opacity:1;stroke:#e63878;stroke-width:3.60669112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>

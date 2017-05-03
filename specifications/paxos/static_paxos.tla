@@ -10,7 +10,7 @@ variables
   acceptor_max_ballot; \* acceptor_max_ballot[a] is the highest-number ballot acceptor a has participated in.
 
 define
-  largest_ballot_id(acceptor_id) == CHOOSE msg \in messages:(msg.type = "1a") /\ (msg.bal > acceptor_max_ballot[acceptor_id]);
+  largest_ballot_id(acceptor_id) == CHOOSE msg \in messages:(msg.type = "1a") /\ (msg.bal > acceptor_max_ballot[acceptor_id]) /\ ;
 end define
 
 procedure send(m)
@@ -22,9 +22,9 @@ end procedure
 \* Phase 1a: A leader selects a ballot number b and sends a 1a message     
 \* with ballot b to a majority of acceptors.  It can do this only if it    
 \* has not already sent a 1a message for ballot b.                     
-procedure phase_1a(ballot_id)
+procedure phase_1a(ballot_number)
 begin
-  l1: assert(~ \E msg \in messages : (msg.type = "1a") /\ (msg.bal = ballot_id));
+  l1: assert(~ \E msg \in messages : (msg.type = "1a") /\ (msg.bal = ballot_number));
       call send([type |-> "1a", bal |-> ballot_id]);
   l2: return;
 end procedure
